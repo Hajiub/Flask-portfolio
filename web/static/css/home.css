@@ -1,0 +1,143 @@
+@import url('main.css');
+/* Default styles */
+.all {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.animation {
+    font-size: 36px;
+    text-align: center;
+    color: #666;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin: 0;
+    padding: 0;
+}
+
+.list li {
+    margin: 0 10px;
+}
+
+.list li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #666;
+    transition: color 0.2s;
+}
+
+.list li a:hover {
+    color: #333;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.icons i {
+    margin: 0 10px;
+}
+
+.icons img {
+    width: 30px;
+    height: 30px;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.icons img:hover {
+    opacity: 1;
+}
+
+.cursor {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 0.2em;
+    height: 1.2em;
+    background-color: var(--modern-green);
+    animation: blink-caret 0.5s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #000;
+    }
+}
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+    /* Adjust padding and font size for smaller screens */
+    .all {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .animation {
+        font-size: 24px;
+    }
+
+    /* Make the navbar and icon section stack vertically */
+    .navbar,
+    .icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust the width of the list and the margin of the list items */
+    .list {
+        width: 100%;
+    }
+
+    .list li {
+        margin: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Adjust font size for smaller screens */
+    h1 {
+        font-size: 24px;
+    }
+
+    .animation {
+        font-size: 18px;
+    }
+
+    .list li a {
+        font-size: 20px;
+    }
+
+    /* Adjust the width of the list */
+    .list {
+        width: 100%;
+    }
+}

@@ -1,0 +1,171 @@
+/* Define custom color variables */
+:root {
+  --navy-blue: #0A192F;
+  --soft-gray: #A0A0A0;
+  --dark-gray: #333333;
+  --elegant-gold: #D4AF37;
+  --clean-white: #FFFFFF;
+  --modern-green: #68B684;
+  --back_color: #f5f5f5;
+}
+
+/* Reset default values for all elements */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Set global styles for the body */
+body {
+  background-color: var(--back_color);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Define styles for the navigation bar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clean-white);
+  color: #fff;
+  padding: 10px;
+}
+
+.nav h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: var(--dark-gray);
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul li {
+  margin: 0 10px;
+}
+
+.nav ul li a {
+  color: var(--soft-gray);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav ul li a:hover {
+  color: var(--dark-gray);
+}
+/* Define responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .nav ul li {
+    margin: 10px 0;
+  }
+}
+
+
+.about-me {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: #f8f8f8;
+  padding: 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.about-me img {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  animation: zoomIn 1s ease-in-out;
+}
+
+.about-me .description {
+  font-family: 'Poppins', sans-serif;
+  color: #555;
+  max-width: 700px;
+}
+
+.about-me h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+
+
+.about-me p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .about-me {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .about-me img {
+    margin-bottom: 1.5rem;
+    height: 200px;
+    width: 200px;
+  }
+  
+  .about-me h1 {
+    font-size: 2.5rem;
+  }
+  
+  .about-me h2 {
+    font-size: 1.8rem;
+  }
+  
+  .about-me p {
+    font-size: 1.1rem;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
